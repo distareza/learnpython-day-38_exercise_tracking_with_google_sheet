@@ -113,3 +113,7 @@ HINT: You'll need to read the relevant section on the request module documentati
 Basic Authentication: https://requests.readthedocs.io/en/master/user/authentication/#basic-authentication
 
 Bearer Authentication: https://stackoverflow.com/questions/29931671/making-an-api-call-in-python-with-an-api-that-requires-a-bearer-token
+
+
+
+solution : https://gist.github.com/angelabauer/2e147663f998bbcf7b403c6c83f56a14
