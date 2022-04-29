@@ -1,20 +1,22 @@
 # Learn accessing api with header authentication
-we are going to create a Exercise Tracking with Google Sheet and sheety to save the data into Google sheet
+we are going to create an Exercise Tracking with Google Sheet and sheety to save the data into Google sheet
 
 ### Step 1 - Setup API Credentials and Google Spreadsheet
 1. Go to this link and create a copy of the My Workouts Spreadsheet (https://docs.google.com/spreadsheets/d/1DHL6Y8XAHSC_KhJsa9QMekwP8b4YheWZY_sxlH3i494/edit?usp=sharing). You may need to login/register.
 
 e.g.:
-
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-01.01.png?raw=true)
 
 
 
 2. Go to the Nutritionix API website (https://www.nutritionix.com/business/api) and select "Get Your API Key" to sign up for a free account. Double check your spam folder (and/or your gmail "promotions" tab) for the Nutritionix verification email.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-01.02.png?raw=true)
 
 
 
 
 3. Once logged in, you should be able to access your API key and App id:
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-01.03.png?raw=true)
 
 
 
@@ -22,6 +24,7 @@ e.g.:
 1. Using the Nutritionix "Natural Language for Exercise" API Documentation (https://docs.google.com/document/d/1_q-K-ObMTZvO0qUEAxROrN3bwMujwAN25sLHwJzliK0/edit#) , figure out how to print the exercise stats for a plain text input.
 
 e.g.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-02.01.gif?raw=true)
 
 
 You can hard code the API key and the App Id for now. In step 6, we'll store the API key and app id as environment variables.
@@ -40,28 +43,33 @@ HINT 2: Use what you have learnt about making POST requests and the relevant par
 1. Log into Sheety (https://sheety.co/) with your Google Account (the same account that owns the Google Sheet you copied in step 1).
 
 Make sure the email matches between your Google Sheet and Sheety Account. e.g.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-03.01.png?raw=true)
 
 
 
 
 
 2. In your project page, click on "New Project" and create a new project in Sheety with the name "Workout Tracking" and paste in the URL of your own "My Workouts" Google Sheet.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-03.02.png?raw=true)
 
 
 
 
 3. Click on the workouts API endpoint and enable GET and POST.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-03.03.png?raw=true)
 
 
 ### Step 4 - Saving Data into Google Sheets
 1.  Using the Sheety Documentation (https://sheety.co/docs/requests), write some code to use the Sheety API to generate a new row of data in your Google Sheet for each of the exercises that you get back from the Nutritionix API. The date and time columns should contain the current date and time from the Python datetime module.
 
 e.g.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-04.01.gif?raw=true)
 
 
 
 
 HINT 1: Parameters have to be lower case. Also, pay special attention to this part in the documentation:
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-04.02.png?raw=true)
 
 
 
@@ -85,6 +93,7 @@ Debugging 🐞 Tip: If you're having any issues, double-check that you are logge
 At the moment there is no authentication that's required to access your Sheety endpoint. That means anyone could read and write to your "My Workout" Google Sheet.
 
 1. Add either "Basic Authentication" or "Bearer Token" to your Sheety endpoint to secure it.  You can hardcode the token in your code for now while you test your code. Once you're sure it works, we can add it to the environment variables in the next step.
+![alt text](https://github.com/distareza/learnpython-day-38_exercise_tracking_with_google_sheet/blob/master/resources/step-05.01.png?raw=true)
 
 
 What is Bearer authentication?
